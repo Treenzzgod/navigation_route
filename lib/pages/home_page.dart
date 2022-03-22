@@ -5,10 +5,11 @@ class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
 
   final List<Item> items = [
-    Item(name: 'Sugar', price: 5000),
-    Item(name: 'Salt', price: 2000),
+    Item(name: 'Sugar', price: 5000, weight: 5),
+    Item(name: 'Salt', price: 2000, weight: 1),
   ];
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -35,6 +36,10 @@ class HomePage extends StatelessWidget {
                       ),
                       Expanded(
                         child: Text(item.price.toString(),
+                            textAlign: TextAlign.end),
+                      ),
+                      Expanded(
+                        child: Text(item.weight.toString(),
                             textAlign: TextAlign.end),
                       ),
                     ],
