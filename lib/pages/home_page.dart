@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:navigation_route/models/Item.dart';
 
@@ -64,6 +66,7 @@ class _HomePageState extends State<HomePage> {
                         child: Text(item.weight.toString(),
                             textAlign: TextAlign.end),
                       ),
+                      SizedBox()
                     ],
                   ),
                 ),

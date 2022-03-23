@@ -75,20 +75,52 @@ class pageview extends StatelessWidget {
                               ),
                               Text(
                                 item.price.toString(),
-                                style: TextStyle(color: Colors.red[600]),
+                                style: TextStyle(
+                                    color: Colors.red[600], fontSize: 15),
                               ),
                               SizedBox(
                                 height: 10,
                               ),
                               Text(
                                 'Produk PT.SENYUMMU MANIS',
-                                style: TextStyle(color: Colors.green[600]),
-                              )
+                                style: TextStyle(
+                                    color: Colors.green[600], fontSize: 16),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
                             ],
                           ),
                         ),
                       ],
                     ),
+                  ),
+                  Container(
+                    height: 400,
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 3,
+                        ),
+                        borderRadius: BorderRadius.circular(6),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.green.withOpacity(0.5),
+                              spreadRadius: 5,
+                              blurRadius: 7,
+                              offset: Offset(0, 3))
+                        ]),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Center(child: Text('Description about product')),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text('Masukkan Dalam Keranjang')),
                   )
                 ],
               ),
