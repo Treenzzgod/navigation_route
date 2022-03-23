@@ -1,13 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:navigation_route/models/Item.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   final List<Item> items = [
-    Item(name: 'Sugar', price: 5000, weight: 5),
-    Item(name: 'Salt', price: 2000, weight: 1),
+    Item(
+        name: 'Sugar',
+        price: 5000,
+        weight: 5,
+        image: ('assets/images/gula.jpg')),
+    Item(
+        name: 'Salt',
+        price: 2000,
+        weight: 1,
+        image: ('assets/images/garam.jpg')),
   ];
+
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +48,11 @@ class HomePage extends StatelessWidget {
                   margin: const EdgeInsets.all(8),
                   child: Row(
                     children: [
+                      Expanded(
+                        child: Image(
+                          image: AssetImage(item.image),
+                        ),
+                      ),
                       Expanded(
                         child: Text(item.name),
                       ),
